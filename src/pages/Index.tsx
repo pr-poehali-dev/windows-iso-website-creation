@@ -35,6 +35,14 @@ const Index = () => {
       version: 'Windows 10 Enterprise',
       architecture: 'x64',
     },
+    {
+      id: '3',
+      name: 'Windows_7_Ultimate_x64.iso',
+      size: 3161999360,
+      uploadDate: new Date('2024-11-03'),
+      version: 'Windows 7 Ultimate',
+      architecture: 'x64',
+    },
   ]);
   const { toast } = useToast();
 
