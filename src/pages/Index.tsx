@@ -20,27 +20,11 @@ const Index = () => {
   const [progress, setProgress] = useState(0);
   const [uploads, setUploads] = useState<ISOFile[]>([
     {
-      id: '1',
-      name: 'Windows_11_Pro_x64.iso',
-      size: 5368709120,
-      uploadDate: new Date('2024-11-08'),
-      version: 'Windows 11 Pro',
-      architecture: 'x64',
-    },
-    {
       id: '2',
       name: 'Windows_10_Enterprise_x64.iso',
       size: 4831838208,
       uploadDate: new Date('2024-11-05'),
       version: 'Windows 10 Enterprise',
-      architecture: 'x64',
-    },
-    {
-      id: '3',
-      name: 'Windows_7_Ultimate_x64.iso',
-      size: 3161999360,
-      uploadDate: new Date('2024-11-03'),
-      version: 'Windows 7 Ultimate',
       architecture: 'x64',
     },
   ]);
