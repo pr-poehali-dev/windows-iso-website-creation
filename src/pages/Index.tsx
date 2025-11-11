@@ -21,10 +21,10 @@ const Index = () => {
   const [uploads, setUploads] = useState<ISOFile[]>([
     {
       id: '2',
-      name: 'Windows_10_Enterprise_x64.iso',
+      name: 'Windows_10_Pro_Home_x64.iso',
       size: 4831838208,
       uploadDate: new Date('2024-11-05'),
-      version: 'Windows 10 Enterprise',
+      version: 'Windows 10 Pro/Home',
       architecture: 'x64',
     },
   ]);
