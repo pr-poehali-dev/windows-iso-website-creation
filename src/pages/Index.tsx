@@ -13,6 +13,7 @@ interface ISOFile {
   uploadDate: Date;
   version: string;
   architecture: string;
+  description?: string;
 }
 
 const Index = () => {
@@ -26,7 +27,7 @@ const Index = () => {
       uploadDate: new Date('2024-11-05'),
       version: 'Windows 10 Pro/Home',
       architecture: 'x64',
-      description: '',
+      description: 'Оригинальный образ Windows 10 с поддержкой Pro и Home редакций',
     },
   ]);
   const { toast } = useToast();
@@ -194,7 +195,7 @@ const Index = () => {
                             </Badge>
                           </div>
                           {upload.description && (
-                            <p className="text-sm text-[#8E9196] mb-3">{upload.description}</p>
+                            <p className="text-sm text-[#8E9196] mb-3 leading-relaxed">{upload.description}</p>
                           )}
                           <div className="flex flex-wrap gap-4 text-sm text-[#8E9196]">
                             <div className="flex items-center gap-1">
