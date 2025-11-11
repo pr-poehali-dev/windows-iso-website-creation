@@ -26,6 +26,7 @@ const Index = () => {
       uploadDate: new Date('2024-11-05'),
       version: 'Windows 10 Pro/Home',
       architecture: 'x64',
+      description: '',
     },
   ]);
   const { toast } = useToast();
@@ -75,6 +76,7 @@ const Index = () => {
             uploadDate: new Date(),
             version: 'Windows',
             architecture: 'x64',
+            description: '',
           };
           
           setUploads((prev) => [newUpload, ...prev]);
@@ -191,6 +193,9 @@ const Index = () => {
                               {upload.architecture}
                             </Badge>
                           </div>
+                          {upload.description && (
+                            <p className="text-sm text-[#8E9196] mb-3">{upload.description}</p>
+                          )}
                           <div className="flex flex-wrap gap-4 text-sm text-[#8E9196]">
                             <div className="flex items-center gap-1">
                               <Icon name="HardDrive" size={14} />
@@ -204,6 +209,23 @@ const Index = () => {
                         </div>
                       </div>
                       <div className="flex gap-2 flex-shrink-0">
+                        <Button
+                          variant="outline"
+                          size="icon"
+                          onClick={() => {
+                            const desc = prompt('Введите описание для образа:');
+                            if (desc !== null) {
+                              setUploads((prev) =>
+                                prev.map((u) =>
+                                  u.id === upload.id ? { ...u, description: desc } : u
+                                )
+                              );
+                            }
+                          }}
+                          className="border-[#8E9196]/30 text-[#8E9196] hover:bg-[#8E9196]/10"
+                        >
+                          <Icon name="Edit" size={18} />
+                        </Button>
                         <Button
                           variant="outline"
                           size="icon"
