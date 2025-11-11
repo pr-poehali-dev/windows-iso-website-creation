@@ -22,7 +22,7 @@ const Index = () => {
     {
       id: '2',
       name: 'Windows_10_Pro_Home_x64.iso',
-      size: 4831838208,
+      size: 2040109465,
       uploadDate: new Date('2024-11-05'),
       version: 'Windows 10 Pro/Home',
       architecture: 'x64',
